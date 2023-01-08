@@ -1,0 +1,68 @@
+﻿@model Shop.Models.Car.CarViewModel
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+
+<div>
+    <h4>Car</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            <label asp-for="Id" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.Id)
+        </dt>
+        <dt class="col-sm-2">
+            <label asp-for="OwnerName" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.OwnerName)
+        </dt>
+        <dt class="col-sm-2">
+            <label asp-for="NumberOfRegistration" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.NumberOfRegistration)
+        </dt>
+        <dt class="col-sm-2">
+            <label asp-for="VINCode" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.VINCode)
+        </dt>
+        <dt class="col-sm-2">
+            <label asp-for="Brand" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.Brand)
+        </dt>
+        <dt class="col-sm-2">
+            <label asp-for="Model" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.Model)
+        </dt>
+        <dt class="col-sm-2">
+            <label asp-for="Color" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.Color)
+        </dt>
+        <dt class="col-sm-2">
+            <label asp-for="Fuel" class="col-sm-2 col-form-label"></label>
+            @Html.DisplayFor(model => model.Fuel)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayFor(model => model.Capacity)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayFor(model => model.NumberOfCarDoors)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayFor(model => model.NumberOfPassangersWithDriver)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayFor(model => model.CarWeight)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayFor(model => model.BuildOfDate)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayFor(model => model.DateOfRegistration)
+        </dt>
+    </dl>
+
+    <form asp-action="DeleteConfirmation">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index">Back To List</a>
+    </form>
+</div>
