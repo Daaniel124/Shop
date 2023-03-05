@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using Shop.ApplicationServices;
+using Shop.Core.ServiceInterface;
 using ShopTARgv21.ApplicationServices;
-using ShopTARgv21.Core.ServiceInterface;
 using ShopTARgv21.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,7 +14,8 @@ builder.Services.AddDbContext<ShopDbContext>(options =>
 
 builder.Services.AddScoped<ISpaceShipServices, SpaceShipServices>();
 builder.Services.AddScoped<ICarServices, CarServices>();
-    
+builder.Services.AddScoped<IFileServices, FileServices>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

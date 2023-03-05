@@ -1,8 +1,9 @@
-﻿using ShopTARgv21.Core.Domain;
+﻿using Shop.Core.Domain;
+using Shop.Core.Dto;
+using ShopTARgv21.Core.Domain;
 using ShopTARgv21.Core.Dto;
 
-
-namespace ShopTARgv21.Core.ServiceInterface
+namespace Shop.Core.ServiceInterface
 {
     public interface ISpaceShipServices : IApplicationServices
     {

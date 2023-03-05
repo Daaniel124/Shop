@@ -1,6 +1,6 @@
-﻿using ShopTARgv21.Core.Domain;
+﻿using Shop.Core.Domain;
 
-namespace ShopTARgv21.Core.ServiceInterface
+namespace Shop.Core.ServiceInterface
 {
     public interface  IApplicationServices
     {

@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShopTARgv21.Core.Dto
+namespace Shop.Core.Dto
 {
     public class CarDto
     {
@@ -22,5 +23,9 @@ namespace ShopTARgv21.Core.Dto
         public int CarWeight { get; set; }
         public DateTime BuildOfDate { get; set; }
         public DateTime DateOfRegistration { get; set; }
+
+        public List<IFormFile> Files { get; set; }
+        public IEnumerable<FileToDatabaseDto> Image { get; set; }
+            = new List<FileToDatabaseDto>();
     }
 }
